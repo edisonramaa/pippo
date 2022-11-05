@@ -1,0 +1,9 @@
+<h1 id="qr-modal-title" mat-dialog-title>{{data.title}}</h1>
+<div id="qr-modal-divider"></div>
+<div mat-dialog-content id="qr-image-container">
+  <img height="250px" width="250px" [src]="data.content"/>
+</div>
+<div id="qr-ok-btn-container" mat-dialog-actions>
+  <a id="download-qr-btn" [href]="fileUrl" [download]="downloadFileName">Download</a>
+  <button id="qr-ok-btn" mat-button [mat-dialog-close]="true" cdkFocusInitial>OK</button>
+</div>

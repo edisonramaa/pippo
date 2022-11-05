@@ -1,0 +1,30 @@
+.location-point-loc > mat-icon, .nature-location-loc > mat-icon{
+  font-size: 15px;
+  height: 20px;
+  width: 20px;
+}
+
+.location-point-loc, .nature-location-loc{
+  color: #48bdb8;
+  text-align: right;
+}
+
+.location-point-loc-wrapper, .nature-location-loc-wrapper{
+  margin-top: -30px;
+}
+
+p.nature-location-loc{
+  margin-top: 5px;
+}
+
+p.location-point-loc{
+  margin-bottom: 5px;
+}
+
+.location-point-loc-wrapper{
+  font-size: 12px;
+}
+
+.location-point-card{
+  margin-bottom: 10px;
+}

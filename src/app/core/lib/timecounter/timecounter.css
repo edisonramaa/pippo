@@ -1,0 +1,12 @@
+.ui-time-counter {
+  font-size: 13px;
+  color: #ed6c41;
+  letter-spacing: -1px;
+  margin-left: -5px;
+}
+
+.ui-time-counter span {
+  font-size: 16px;
+  color: #ed6c41;
+  margin: 0 5px 0 5px;
+}

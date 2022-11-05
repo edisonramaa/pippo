@@ -1,0 +1,35 @@
+<div id="chats">
+  <div class="channel">
+    <label class="channel-name">{{channel}}</label>
+  </div>
+  <div class="chat-div" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+  <div   *ngFor="let msg of chatMsgList">
+    <div *ngIf="msg.email!==email">
+      <mat-card class="senders-message" style="border-radius: 15px !important;">
+        <mat-card-subtitle class="user-avatar-image name-class" mat-card-avatar>{{msg.username}}</mat-card-subtitle>
+        <mat-card-header>
+          <mat-card-title>{{msg.message}}.</mat-card-title>
+          <mat-card-subtitle>{{msg.sentTime  | date:'MM/dd/yyyy h:mm a z' }}</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
+    <div *ngIf="msg.email===email">
+      <mat-card class="my-message" style="border-radius: 15px !important;">
+        <mat-card-subtitle class="user-avatar-image name-class" mat-card-avatar>{{username}}</mat-card-subtitle>
+        <mat-card-header>
+          <mat-card-title>{{msg.message}}</mat-card-title>
+          <mat-card-subtitle>{{msg.sentTime  | date:'MM/dd/yyyy h:mm a z' }}</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
+  </div>
+  </div>
+
+  <form style="bottom: 0" class="send-a-message">
+    <mat-form-field style="    padding: 10px;width: 95%;margin-bottom: 20px;" class="example-full-width">
+      <input [(ngModel)]="message" (keyup.enter)="sendMessage(message)" type="text" matInput placeholder="Type a new message" [ngModelOptions]="{standalone: true}">
+      <mat-icon (click)="sendMessage(message)" matSuffix>send</mat-icon>
+    </mat-form-field>
+  </form>
+</div>
+

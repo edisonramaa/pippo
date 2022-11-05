@@ -1,0 +1,49 @@
+.select-region{
+  width: 100%;
+}
+
+.search-field{
+  width: 85%;
+}
+
+.search-btn{
+  background-color: #48bdb8;
+  float: right;
+}
+
+.search-btn mat-icon{
+  color: white;
+}
+
+#select-region{
+  background-color: #48bdb8;
+  color: white;
+}
+
+#select-region option{
+  background-color: white;
+  color: black;
+}
+
+.nature-location-loc > mat-icon{
+  font-size: 15px;
+  height: 20px;
+  width: 20px;
+}
+
+.nature-location-loc{
+  color: #48bdb8;
+}
+
+.nature-location-loc-wrapper{
+  float: right;
+  margin-top: -15px;
+}
+
+.nature-location-card{
+  margin-bottom: 10px;
+}
+
+div.divider{
+  margin-bottom: 10px;
+}

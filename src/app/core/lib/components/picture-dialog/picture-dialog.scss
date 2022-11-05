@@ -1,0 +1,35 @@
+#qr-image-container {
+  text-align: center;
+}
+
+#qr-ok-btn {
+  background: #ED6C41;
+  color: white;
+  cursor: pointer;
+  min-width: 90px;
+}
+
+#qr-ok-btn-container {
+  float: right;
+}
+
+#qr-modal-divider {
+  height: 2px;
+  background: #ED6C41;
+  margin-bottom: 15px;
+}
+
+#qr-modal-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#download-qr-btn {
+  text-decoration: none;
+  padding: 8.5px 15px;
+  background: grey;
+  border-radius: 4px;
+  color: white;
+  margin-right: 10px;
+}
