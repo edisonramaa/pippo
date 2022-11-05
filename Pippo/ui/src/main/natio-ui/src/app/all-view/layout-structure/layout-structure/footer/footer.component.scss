@@ -1,0 +1,38 @@
+.footer{
+  bottom:0;
+  border-top: 1px solid #48bdb8;
+}
+
+.mat-icon-button {
+  width: 70px;
+  height: 30px;
+  margin-top: 10px;
+  width: 100%;
+  margin-top: 0px;
+}
+
+.footer-button-desc{
+  text-align: center;
+  font-size: 0.6em;
+  color: white;
+  margin-top: -7px;
+}
+
+.footer-button-container{
+  display: inline-block;
+  width: 25%;
+  float: left;
+  height: 56px;
+}
+
+.mat-toolbar{
+  padding: 0px;
+}
+
+.footer-button-container.selected {
+  background-color: white;
+}
+
+/deep/ .footer-button-container.selected > button > span > mat-icon, .footer-button-container.selected > p {
+  color: #48bdb8;
+}

@@ -1,0 +1,62 @@
+<div id="sign-up">
+  <mat-card>
+    <img height="60" src="../../assets/logo/login-logo.png" width="150"/>
+    <mat-card-header>
+      <mat-card-title>Sign Up</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+
+      <mat-hint *ngIf="showErrMsg">{{showErrMsg}}</mat-hint>
+      <mat-hint class="success" *ngIf="showSuccessMsg">{{showSuccessMsg}}</mat-hint>
+      <form [formGroup]="signUpFormGroup" method="post">
+        <mat-form-field class="full-width">
+          <mat-label>Full name</mat-label>
+          <input formControlName="name" matInput name="name" placeholder="Full Name">
+          <mat-hint
+            *ngIf="signUpFormGroup.controls['name'].hasError('required')&& signUpFormGroup.controls['name'].dirty">
+            Full name is required.
+          </mat-hint>
+          <mat-hint
+            *ngIf="signUpFormGroup.controls['name'].hasError('pattern')&& signUpFormGroup.controls['name'].dirty">
+            Please enter valid name.
+          </mat-hint>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <mat-label>Email</mat-label>
+          <input formControlName="email" matInput name="email" placeholder="Email">
+          <mat-hint
+                  *ngIf="signUpFormGroup.controls['email'].hasError('required')&& signUpFormGroup.controls['email'].dirty">
+            Email is required.
+          </mat-hint>
+          <mat-hint
+            *ngIf="signUpFormGroup.controls['email'].hasError('pattern')&& signUpFormGroup.controls['email'].dirty">
+            Please enter a valid email address.
+          </mat-hint>
+          <mat-hint
+            *ngIf="signUpFormGroup.controls['email'].hasError('alreadyInUse')&& signUpFormGroup.controls['email'].dirty">
+            Email address is already in use.
+          </mat-hint>
+
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <mat-label>Password</mat-label>
+          <input formControlName="password" matInput name="password" placeholder="Password" type="password">
+          <mat-hint
+                  *ngIf="signUpFormGroup.controls['password'].hasError('required')&& signUpFormGroup.controls['password'].dirty">
+            Password is required
+          </mat-hint>
+          <mat-hint
+            *ngIf="signUpFormGroup.controls['password'].hasError('minlength')&& signUpFormGroup.controls['password'].dirty">
+            Password must be at least 6 characters
+          </mat-hint>
+        </mat-form-field>
+        <button (click)="onSignUp()" [disabled]="signUpFormGroup.invalid || disableSignUpBtn" color="primary"
+                mat-raised-button
+                type="submit">Sign up
+        </button>
+      </form>
+      <p>Already a user? <a style="text-decoration:none; cursor:pointer;" href="/login">Login</a> here!</p>
+    </mat-card-content>
+  </mat-card>
+</div>
+

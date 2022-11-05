@@ -1,0 +1,35 @@
+<div id="layout">
+  <mat-sidenav-container class="all-wrap">
+    <mat-sidenav #sidenav class="navbar-width">
+
+      <mat-card  class="expanded-panel-container">
+        <mat-card-header *ngIf="showLoggedInMenus">
+          <div class="user-avatar-image" mat-card-avatar></div>
+          <mat-card-title>{{userProfileModel.name}}</mat-card-title>
+          <mat-card-subtitle>My Profile</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-header *ngIf="!showLoggedInMenus">
+          <div class="user-avatar-image" mat-card-avatar></div>
+          <mat-card-title>Guest</mat-card-title>
+        </mat-card-header>
+      </mat-card>
+
+      <mat-list *ngIf="showLoggedInMenus">
+        <mat-list-item (click)="logout()" style="cursor: pointer">Logout</mat-list-item>
+      </mat-list>
+      <mat-list *ngIf="!showLoggedInMenus">
+        <mat-list-item (click)="login()" style="cursor: pointer">Login</mat-list-item>
+      </mat-list>
+    </mat-sidenav>
+
+    <div class="page-wrap">
+      <app-header [sideNavBar]="sidenav"></app-header>
+      <main class="content">
+        <router-outlet></router-outlet>
+      </main>
+      <app-footer></app-footer>
+
+    </div>
+  </mat-sidenav-container>
+
+</div>

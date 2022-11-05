@@ -1,0 +1,65 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+//@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~@angular/material/theming';
+@import '~raleway-webfont/raleway.min.css';
+@import '~ngx-bar-rating/themes/br-horizontal-theme';
+
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$ng-client-primary: mat-palette($mat-cyan);
+$ng-client-accent: mat-palette($mat-cyan, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$ng-client-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$ng-client-theme: mat-light-theme($ng-client-primary, $ng-client-accent, $ng-client-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($ng-client-theme);
+
+$ng-client-typography: mat-typography-config(
+  $font-family: 'Raleway'
+);
+@include mat-core($ng-client-typography);
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Raleway, "Helvetica Neue", sans-serif; }
+
+.white {
+  color: #ffffff;
+}
+.imtra-header {
+  text-align: center;
+}
+
+.header,.footer,.content { position:absolute; right:0;left:0}
+
+.header > .mat-toolbar.mat-primary, .footer > .mat-toolbar.mat-primary{
+  background: #48bdb8;
+}
+///deep/ body {
+//  background-color: white !important;
+//}
+
+.mat-form-field.mat-focused .mat-form-field-label, .mat-form-field.mat-focused .mat-form-field-required-marker, .mat-form-field-type-mat-native-select.mat-focused:not(.mat-form-field-invalid) .mat-form-field-infix::after, .mat-form-field.mat-focused .mat-form-field-ripple{
+  color: #48bdb8;
+}
+
+.mat-form-field.mat-focused .mat-form-field-ripple{
+  background-color: #48bdb8;
+}
