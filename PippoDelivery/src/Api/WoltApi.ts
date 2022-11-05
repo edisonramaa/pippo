@@ -1,8 +1,7 @@
 import { Response, Request } from 'express';
 import { Config } from '../Config';
 import axios from 'axios';
-import { DeliveryOrderT } from '../wolt';
-import { request } from 'http';
+
 /**
  * Wolt controller
  */
