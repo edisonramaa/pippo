@@ -1,0 +1,30 @@
+#group-channels .example-full-width {
+  width: 100%;
+}
+
+
+#group-channels  .mat-card {
+  margin: -20px !important;
+}
+
+#group-channels  .senders-message {
+  background-color: #e5e5e5;
+}
+
+#group-channels  .channel-time {
+  float: right !important;
+}
+
+#group-channels  .mat-card-header .mat-card-title {
+  font-size: 13px;
+}
+
+#group-channels  mat-card-header{
+  display: inline-block;
+}
+
+#group-channels .channel-time{
+  float: right;
+  text-align: right;
+  font-size: 14px;
+}
