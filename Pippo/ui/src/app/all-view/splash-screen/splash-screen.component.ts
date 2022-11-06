@@ -10,7 +10,7 @@ import {PwaService} from "../../app-services/pwa.service";
     trigger('fadeOut', [
       transition(':leave', [
         query(':leave', animateChild(), {optional: true}),
-        animate(600, style({opacity: 0}))
+        animate(1300, style({opacity: 0}))
       ]),
     ]),
   ],
