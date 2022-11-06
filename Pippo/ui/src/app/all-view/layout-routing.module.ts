@@ -19,9 +19,11 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       {path: '', redirectTo: 'home', pathMatch: 'full'},
-      {path: MAIN_URL, loadChildren: () => import('./explore-trails/explore-trails.module').then(m => m.ExploreTrailsModule)},
+      {path: MAIN_URL, loadChildren: () => import('./home/home.module').then(m => m.HomeModule)},
+      {path: 'chats', loadChildren: () => import('./chats/chats.module').then(m => m.ChatsModule)},
     ]
-  }
+  },
+
 ];
 
 @NgModule({

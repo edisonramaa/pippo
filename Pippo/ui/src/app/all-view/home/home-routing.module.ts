@@ -1,10 +1,10 @@
 import {NgModule} from "@angular/core";
 import {RouterModule, Routes} from "@angular/router";
-import {ExploreTrailsComponent} from "./explore-trails.component";
+import {HomeComponent} from "./home.component";
 
 const routes: Routes = [
   {
-    path: '', component: ExploreTrailsComponent
+    path: '', component: HomeComponent
   }
 ];
 
@@ -12,5 +12,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class ExploreTrailsRoutingModule {
+export class HomeRoutingModule {
 }

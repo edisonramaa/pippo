@@ -7,9 +7,7 @@ import {HttpService} from "../core/lib/services/http.service";
 export class ChatService extends FTBaseService {
   dataModel: {};
 
-  serviceApi: string = '/pippo/chat';
-
-
+  serviceApi: string = '/ai-chatbot/command';
 
   constructor(httpService: HttpService) {
     super(httpService);

@@ -30,7 +30,7 @@ export class LayoutComponent implements OnInit {
   }
   initForm() {
     this._userProfile.getMyProfile().then((res: ResponseModel) => {
-      if (res.responseStatus) {
+      if (res && res.responseStatus) {
         this.userProfileModel = res.result;
       }else {
         this.userProfileModel = new UserProfileModel();
