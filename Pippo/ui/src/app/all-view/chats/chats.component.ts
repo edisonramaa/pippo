@@ -35,7 +35,13 @@ export class ChatsComponent implements OnInit  {
     private _chatService: ChatService
   ){}
 
-  ngOnInit() {}
+  ngOnInit() {
+    if(JSON.parse(localStorage.getItem('chat-logs'))){
+      this.chatMsgList = JSON.parse(localStorage.getItem('chat-logs'));
+      this.prevConv = localStorage.getItem('prev-conv');
+      this.lastAiMessage = localStorage.getItem('last-ai-message');
+    }
+  }
 
   sendMessage() {
     if(this.message) {
@@ -57,7 +63,9 @@ export class ChatsComponent implements OnInit  {
           this.lastAiMessage = res.result.response.trim();
         }
       });
-
+      localStorage.setItem('chat-logs', JSON.stringify(this.chatMsgList));
+      localStorage.setItem('prev-conv', this.prevConv);
+      localStorage.setItem('last-ai-message', this.lastAiMessage);
       this.message = "";
     }
   }
