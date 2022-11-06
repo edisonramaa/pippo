@@ -11,7 +11,9 @@ import {ProductModel} from "../../models/product.model";
 export class HomeComponent implements OnInit {
   selected:string = 'none';
   placeNames = [];
-  productsList: ProductModel[];
+  productsList: ProductModel[] = [];
+  indoorProductsList: ProductModel[] = [];
+  outdoorProductsList: ProductModel[] = [];
 
   constructor(
     private _router: Router,
@@ -27,6 +29,8 @@ export class HomeComponent implements OnInit {
     this.productListService.getProductList().then((res:ProductModel[])=>{
       if(res){
         this.productsList = res;
+        this.indoorProductsList = this.productsList.filter(pl => pl.category ==='indoors');
+        this.outdoorProductsList = this.productsList.filter(pl => pl.category ==='outdoors');
       }
     });
   }
