@@ -28,7 +28,7 @@ export const products = [
 		count: 1,
 		days: 1,
 		preparation_time: 10,
-		imageUrl:
+		image_url:
 			'https://cdn.shopify.com/s/files/1/0331/9201/8057/products/jackson-mystique-figure-skates-white-figure-skates-29165325713557_1200x.jpg?v=1647347049',
 		owner: {
 			name: 'Oona',
@@ -47,7 +47,7 @@ export const products = [
 		count: 1,
 		days: 1,
 		preparation_time: 0,
-		imageUrl:
+		image_url:
 			'https://cdn.arstechnica.net/wp-content/uploads/2022/10/ps5.jpg',
 		owner: {
 			name: 'Esa',
@@ -66,7 +66,7 @@ export const products = [
 		count: 1,
 		days: 30,
 		preparation_time: 5,
-		imageUrl: 'https://m.media-amazon.com/images/I/91SZSW8qSsL.jpg',
+		image_url: 'https://m.media-amazon.com/images/I/91SZSW8qSsL.jpg',
 		owner: {
 			name: 'Elio',
 			phoneNumber: '+358515151515',
