@@ -9,6 +9,7 @@ export const products = [
 			currency: 'Eur',
 			count: 1,
 			days: 1,
+			preparation_time: 10,
 		},
 		owner: {
 			name: 'Hanna',
@@ -17,7 +18,7 @@ export const products = [
 			address: 'Capellan Puistotie 25A',
 		},
 	},
-    {
+	{
 		product: {
 			title: 'Scates size 38',
 			description: 'Feel free to rent my skates for a full day.',
@@ -26,6 +27,7 @@ export const products = [
 			currency: 'Eur',
 			count: 1,
 			days: 1,
+			preparation_time: 10,
 		},
 		owner: {
 			name: 'Oona',
@@ -34,7 +36,7 @@ export const products = [
 			address: 'Olavinkatu 1',
 		},
 	},
-    {
+	{
 		product: {
 			title: 'PS5',
 			description: '',
@@ -43,6 +45,7 @@ export const products = [
 			currency: 'Eur',
 			count: 1,
 			days: 1,
+			preparation_time: 0,
 		},
 		owner: {
 			name: 'Esa',
@@ -51,15 +54,17 @@ export const products = [
 			address: 'Mannerheimintie 109',
 		},
 	},
-    {
+	{
 		product: {
 			title: '1984',
-			description: 'Do you feel like reading a book? Here is one of the best dystopian social science fiction novel and cautionary tale written by the English writer George Orwell. ',
+			description:
+				'Do you feel like reading a book? Here is one of the best dystopian social science fiction novel and cautionary tale written by the English writer George Orwell. ',
 			category: 'books',
 			rent_price: 5,
 			currency: 'Eur',
 			count: 1,
 			days: 1,
+			preparation_time: 5,
 		},
 		owner: {
 			name: 'Elio',

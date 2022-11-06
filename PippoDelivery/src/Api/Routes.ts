@@ -12,6 +12,6 @@ export class Routes {
 
     route(express: Express) {
         express.post('/api/delivery-order', this.woltApi.deliveryOrder());
-        express.get('/api/products', this.api.products());
+        express.get('/api/products', this.api.getProducts());
     }
 }

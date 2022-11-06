@@ -3,8 +3,8 @@ import { Response, Request } from 'express';
 import { products } from '../DummyData/products';
 
 export class MainAPI {
-	
-	products() {
+
+	getProducts() {
         return async (req: Request, res: Response) => {
 			try {
 				const results = products;
