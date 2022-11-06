@@ -33,6 +33,10 @@ public class WebResourceConstant {
     public static final String LAT = "lat";
     public static final String LON = "lon";
 
+    public interface APIManagement {
+        String SEND_COMMAND = "/v1/completions";
+    }
+
     /**
      * Module wise interface for api end points
      */
@@ -43,23 +47,16 @@ public class WebResourceConstant {
         String PROFILE = "/profile";
         String SIGN_UP = "/sign-up";
 
-
     }
 
+    public interface ChatbotManagement {
+        String SEND_COMMAND = "/command";
+    }
     public interface PIPPO {
-        String PIPPO_BASE = BASE_API + "/pippo";
+        String PIPPO_BASE = BASE_API + "/v1";
         String USER = PIPPO_BASE + "/user";
-        String LOCATION = PIPPO_BASE + "/location";
-        String MY_TRIPS = "/{userId}/trips";
-        String RECOMMENDER = PIPPO_BASE + "/recommender";
-        String GET_CHART_DATA = "/data";
-        String PIPPO_NATURE_LOCATIONS = PIPPO_BASE + "/nature-locations";
-        String PIPPO_NATURE_LOCATIONS_GET_ALL = "/get-all";
-        String PIPPO_NATURE_LOCATIONS_POINTS = "/get-location-point/{natureLocation}";
-        String PIPPO_NATURE_LOCATIONS_POINT_DETAILS = "location-point-details/{place}/{trail}";
-        String GET_RECOMMENDED_PLACES = "/get-recommended-places";
-        String SAVE_LOCATION = "/save-trips";
 
+        String AI_CHATBOT = PIPPO_BASE + "/ai-chatbot";
     }
 
 }

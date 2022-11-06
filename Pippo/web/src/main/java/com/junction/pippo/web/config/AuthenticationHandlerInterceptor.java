@@ -22,6 +22,7 @@ public class AuthenticationHandlerInterceptor extends HandlerInterceptorAdapter 
         authorizationFreeuriList.add(WebResourceConstant.UserManagement.UM_AUTHENTICATE);
         authorizationFreeuriList.add(WebResourceConstant.UserManagement.SIGN_UP);
         authorizationFreeuriList.add("/user/create");
+        authorizationFreeuriList.add("/ai-chatbot");
         authorizationFreeuriList.add("/upload");
         authorizationFreeuriList.add("/display");
         authorizationFreeuriList.add(WebResourceConstant.UserManagement.EMAIL);
