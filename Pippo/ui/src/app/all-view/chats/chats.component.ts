@@ -17,11 +17,11 @@ export class ChatsComponent implements OnInit  {
   message:string;
   email:string;
   username:string;
-  channel: string = 'Test channel';
+  channel: string = 'Your Buddy Pippo';
   prevConv: string;
   lastAiMessage: string;
   chatMsgList: ChatModel [] = [{
-    prompt: 'Test string',
+    prompt: 'Hi, I am Pippo, your virtual friend! You can talk to me about your struggles and I will do my best to help you!',
     user: 1
   }];
 
@@ -42,12 +42,12 @@ export class ChatsComponent implements OnInit  {
       let sendMsg : ChatModel = new ChatModel();
       sendMsg.prompt = this.message;
       sendMsg.user = 0;
-      
+
       this.chatMsgList.push(sendMsg);
 
-      let convCalc = this.prevConv === null ? this.message : this.prevConv + '\\n\\nAI:' + this.lastAiMessage + '\\n\\nHuman:' + this.message;
+      let convCalc = (this.prevConv === null || this.prevConv == undefined) ? this.message : this.prevConv + '\\n\\nAI:' + this.lastAiMessage + '\\n\\nHuman:' + this.message;
 
-      this._chatService.create(convCalc).then((res:ResponseModel)=>{
+      this._chatService.sendMsg(convCalc).then((res:ResponseModel)=>{
         if(res.responseStatus){
           this.chatMsgList.push({
             prompt: res.result.response.trim(),

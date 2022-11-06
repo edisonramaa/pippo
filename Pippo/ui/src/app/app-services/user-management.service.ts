@@ -7,7 +7,7 @@ import {HttpService} from "../core/lib/services/http.service";
 export class UserManagementService extends FTBaseService {
   dataModel: UserManagementModel = new UserManagementModel();
 
-  serviceApi: string = '/pippo/user';
+  serviceApi: string = '/user';
   constructor(httpService: HttpService) {
     super(httpService);
   }

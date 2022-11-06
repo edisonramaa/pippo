@@ -14,9 +14,6 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.function.Supplier;
 
 @Service

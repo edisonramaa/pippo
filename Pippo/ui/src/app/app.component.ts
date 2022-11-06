@@ -12,34 +12,16 @@ import {SessionStorageService} from "./core/lib/services/session-storage.service
 export class AppComponent {
   title = 'Pippo';
   promptEvent: any;
-  channels =[
-    'hiking-in-finland',
-    'Leivonmäki-Pipponal-Park',
-    'Nuuksio-Pipponal-Park',
-    'Oulanka-Pipponal-Park',
-    'Patvinsuo-Pipponal-Park'
-  ];
-  private serverUrl = ApiConstant.API_ROOT_URL + '/socket';
 
   constructor(private swUpdate: SwUpdate, private snackBar: MatSnackBar, private _sessionStorage: SessionStorageService) {
   }
   ngOnInit() {
-    this.notifyNewVersion();
     this.pwaFunctions();
   }
 
   /**
    * This method notifies the user about new version of application
    */
-  notifyNewVersion(){
-    if (this.swUpdate.isEnabled) {
-      this.swUpdate.available.subscribe(() => {
-        if (confirm("New version available. Load New Version?")) {
-          window.location.reload();
-        }
-      });
-    }
-  }
 
   pwaFunctions() {
     let noInternetSnack;

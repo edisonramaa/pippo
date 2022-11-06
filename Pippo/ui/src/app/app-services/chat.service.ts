@@ -14,7 +14,7 @@ export class ChatService extends FTBaseService {
   }
 
   sendMsg(msg) {
-    this.httpService.postRequest(this.serviceApi,msg);
+    return this.httpService.postRequest(this.serviceApi,{prompt: msg});
   }
 
   create(data) {

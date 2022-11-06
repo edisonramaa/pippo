@@ -8,6 +8,10 @@
   margin: 0 auto !important;
 }
 
+::ng-deep #login .mat-card-header-text {
+  width: 100%;
+}
+
 #login .mat-raised-button {
   background-color: #48bdb8;
   color: white;

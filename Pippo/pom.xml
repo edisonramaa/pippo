@@ -5,7 +5,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>core</module>
-        <module>ui</module>
         <module>web</module>
     </modules>
     <parent>

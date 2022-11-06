@@ -8,7 +8,7 @@ import {HttpService} from "../core/lib/services/http.service";
 export class MyTripsService extends FTBaseService {
   dataModel: {};
 
-  serviceApi: string = '/pippo/location';
+  serviceApi: string = '/location';
 
   constructor(httpService: HttpService) {
     super(httpService);
