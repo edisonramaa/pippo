@@ -10,7 +10,8 @@ import {
   NATURE_LOCATION_EXT,
   LOCATION_POINT_DETAILS,
   CHAT_CHANNEL,
-  LOCATION_POINT_DETAILS_EXT
+  LOCATION_POINT_DETAILS_EXT,
+  PROFILE
 } from "../core/utility/navigation-url";
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
     children: [
       {path: '', redirectTo: 'home', pathMatch: 'full'},
       {path: MAIN_URL, loadChildren: () => import('./explore-trails/explore-trails.module').then(m => m.ExploreTrailsModule)},
+      {path: PROFILE, loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule)},
     ]
   }
 ];
