@@ -1,49 +1,6 @@
 <div id="explore-trails">
 
-  <!-- <mat-form-field class="select-region">
-    <mat-label>Select a region</mat-label>
-    <mat-select (selectionChange)="onRegionChange($event)" [(value)]="selected">
-      <mat-option value="none">None</mat-option>
-      <mat-option value="helsinki">Helsinki Region</mat-option>
-      <mat-option value="lapland">Lapland</mat-option>
-    </mat-select>
-  </mat-form-field> -->
-
-  <!--<div>
-    <select id="select-region">
-      <option disabled value="">Select a region</option>
-      <option value="helsinki">Helsinki Region</option>
-      <option value="lapland">Lapland</option>
-    </select>
-  </div>-->
-
-   <!-- <mat-form-field class="example-full-width search-field">
-      <input matInput placeholder="Search">
-    </mat-form-field>
-    <button mat-mini-fab class="search-btn">
-      <mat-icon>search</mat-icon>
-    </button> -->
-
-  <!-- <div class="divider"></div> -->
-  <!-- <div *ngIf="placeNames.length!==0">
-    <mat-card class="nature-location-card" (click)="openNatureLocation(placeName)" *ngFor="let placeName of placeNames">
-      <mat-card-header>
-        <mat-card-title>{{placeName}}</mat-card-title>
-        <mat-card-subtitle>Pipponal Park</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content class="nature-location-loc-wrapper">
-        <p class="nature-location-loc"><mat-icon>location_on</mat-icon>Helsinki, Finland</p>
-      </mat-card-content>
-    </mat-card>
-  </div>
-
-  <mat-card class="nature-location-card" *ngIf="placeNames.length===0 && selected!='none'" >
-    <mat-card-content>
-      <p> Sorry, No records are available for selected placed.</p>
-    </mat-card-content>
-  </mat-card> -->
-
-  <mat-card class="nature-location-card" *ngFor="let item of products">
+  <mat-card class="nature-location-card" *ngFor="let item of productsList">
     <mat-card-header>
       <mat-card-title>{{item.title}}</mat-card-title>
       <mat-card-subtitle>{{item.owner.name}}</mat-card-subtitle>

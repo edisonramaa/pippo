@@ -3,11 +3,9 @@ import { Router } from '@angular/router';
 
 import { EventService } from '../../../../core/lib/services/event.service';
 import {
-  EXPLORE_TRAILS,
-  PIPPO,
-  MY_TRIPS,
+  HOME,
   PROFILE,
-  CHATS,
+  CHATS, PIPPO, MY_BOOKINGS,
 } from '../../../../core/utility/navigation-url';
 
 @Component({
@@ -20,8 +18,8 @@ export class FooterComponent implements OnInit {
 
   ngOnInit() {}
 
-  openFindTrail() {
-    this._eventService.setHeader('Trails');
+  openFindProducts() {
+    this._eventService.setHeader('Ideas');
 
     if (
       document.querySelectorAll('.footer-button-container.selected').length > 0
@@ -34,7 +32,7 @@ export class FooterComponent implements OnInit {
       .querySelectorAll('.footer-button-container')[0]
       .classList.add('selected');
 
-    let finalUrl = '/' + PIPPO + '/' + EXPLORE_TRAILS;
+    let finalUrl = '/' + PIPPO + '/' + HOME;
     this._router.navigateByUrl(finalUrl);
   }
 
@@ -56,8 +54,8 @@ export class FooterComponent implements OnInit {
     this._router.navigateByUrl(finalUrl);
   }
 
-  openMyPlans() {
-    this._eventService.setHeader('My Plans');
+  openMyBookings() {
+    this._eventService.setHeader('My Bookings');
 
     if (
       document.querySelectorAll('.footer-button-container.selected').length > 0
@@ -70,7 +68,7 @@ export class FooterComponent implements OnInit {
       .querySelectorAll('.footer-button-container')[2]
       .classList.add('selected');
 
-    let finalUrl = '/' + PIPPO + '/' + MY_TRIPS;
+    let finalUrl = '/' + PIPPO + '/' + MY_BOOKINGS;
     this._router.navigateByUrl(finalUrl);
   }
 

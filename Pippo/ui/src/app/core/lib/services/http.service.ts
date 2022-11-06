@@ -20,6 +20,12 @@ export class HttpService {
       .catch(this.catchError);
   }
 
+  getRequestExternal(data) {
+    return this._http.get(data).toPromise()
+      // .map((response: HttpResponse) => response))
+      .catch(this.catchError);
+  }
+
   postRequest(apiEndPoint, data) {
     return this._http.post(this.baseApi + apiEndPoint, data)
       .toPromise()

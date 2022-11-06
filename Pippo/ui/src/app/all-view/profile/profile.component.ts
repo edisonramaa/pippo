@@ -1,7 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import { getMatIconFailedToSanitizeUrlError } from '@angular/material';
 import {Router} from "@angular/router";
-import {LOCATION_POINT_DETAILS, PIPPO, NATURE_LOCATION} from "../../core/utility/navigation-url";
+import {LOCATION_POINT_DETAILS, PIPPO} from "../../core/utility/navigation-url";
 import { UserProfileService } from 'src/app/app-services/user-profile.service';
 
 @Component({
