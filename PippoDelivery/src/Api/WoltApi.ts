@@ -38,8 +38,8 @@ export class WoltAPIs {
 					tracking: results.data.tracking,
 					price: results.data.price,
 					eta: results.data.dropoff.eta,
-				}
-				res.status(200).send(results.data);
+				};
+				res.status(200).send(data);
 			} catch (error) {
 				console.error(error);
 			}
