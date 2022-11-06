@@ -18,6 +18,20 @@
   width: 97%;
   margin-left: -16px;
 }
+#chats .senders-message .user-avatar-image-me {
+  float: left;
+}
+
+#chats  .my-message .user-avatar-image-me {
+  float: right;
+}
+
+#chats .user-avatar-image-me {
+  background-image: url('../../../assets/logo/general-user-name-icon.png');
+  background-size: cover;
+  border: 1px solid #48bdb8;
+}
+
 #chats .senders-message .user-avatar-image {
   float: left;
 }
@@ -26,12 +40,20 @@
   float: right;
 }
 
+#chats .user-avatar-image {
+  background-image: url('../../../assets/logo/pippo-icon.jpg');
+  background-size: cover;
+  border: 1px solid #48bdb8;
+}
+
 #chats  .my-message {
   margin-bottom: 10px;
+  min-height: 45px;
 }
 
 #chats  .senders-message{
   margin-bottom: 10px;
+  min-height: 45px;
 }
 
 #chats  .mat-card {

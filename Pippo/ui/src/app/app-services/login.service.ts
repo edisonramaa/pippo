@@ -9,7 +9,7 @@ import {MAIN_URL, PIPPO} from "../core/utility/navigation-url";
 export class LoginService extends FTBaseService {
   dataModel: {};
 
-  serviceApi: string = '/pippo/user';
+  serviceApi: string = '/user';
   authUrl: string = '/auth';
   changePwdUrl: string = '/chhangepassword';
 

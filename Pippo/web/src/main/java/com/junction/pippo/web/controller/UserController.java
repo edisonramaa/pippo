@@ -27,13 +27,13 @@ import java.util.Map;
 public class UserController extends ControllerBase {
     public static final String BASE_URL = WebResourceConstant.PIPPO.USER;
     private IUserService userService;
-    private IPippoToken emoneyToken;
+    private IPippoToken pippoToken;
 
     @Autowired
     public UserController(IUserService userService, IPippoToken emoneyToken) {
         super(userService, new BeanMapperImpl(UserEntity.class, UserRequestDto.class), new BeanMapperImpl(UserEntity.class, UserResponseDto.class));
         this.userService = userService;
-        this.emoneyToken = emoneyToken;
+        this.pippoToken = emoneyToken;
     }
 
     @PostMapping(WebResourceConstant.UserManagement.CHANGE_PASSWORD)
@@ -71,7 +71,7 @@ public class UserController extends ControllerBase {
         }
 
 
-        String token = emoneyToken.generateToken(authenticUser);
+        String token = pippoToken.generateToken(authenticUser);
         Map<String, Object> responseMap = new HashMap<>();
         responseMap.put("token", token);
         responseMap.put("email",userEntity.getEmail());

@@ -4,7 +4,7 @@
   </div>
   <div class="chat-div" #scrollMe [scrollTop]="scrollMe.scrollHeight">
       <mat-card class="{{msg.user === 1 ? 'senders-message' : 'my-message'}}" style="border-radius: 15px !important;" *ngFor="let msg of chatMsgList">
-        <mat-card-subtitle class="user-avatar-image name-class" mat-card-avatar>{{msg.user === 1 ? 'PIPPO' : 'ME'}}</mat-card-subtitle>
+        <mat-card-subtitle class="{{msg.user === 1 ? 'user-avatar-image' : 'user-avatar-image-me'}} name-class" mat-card-avatar></mat-card-subtitle>
         <mat-card-header>
           <mat-card-title>{{msg.prompt}}</mat-card-title>
         </mat-card-header>

@@ -7,7 +7,7 @@ import {HttpService} from "../core/lib/services/http.service";
 export class SignUpService extends FTBaseService {
   dataModel: {};
 
-  serviceApi: string = '/pippo/user';
+  serviceApi: string = '/user';
   signUpUrl: string = '/sign-up';
 
   constructor(httpService: HttpService) {
