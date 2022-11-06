@@ -14,5 +14,6 @@ export const CHARTS: string = 'charts';
 export const CHANNEL: string = 'channel';
 export const CHAT_CHANNEL: string = 'channel/:channelName';
 export const PROFILE_URL: string = 'profile';
+export const PROFILE: string = 'profileMain';
 export const ADMIN_URL: string = 'admin';
 export const CHANGE_PASS: string = 'change-password';

@@ -1,5 +1,5 @@
-.footer{
-  bottom:0;
+.footer {
+  bottom: 0;
   border-top: 1px solid #48bdb8;
 }
 
@@ -11,21 +11,20 @@
   margin-top: 0px;
 }
 
-.footer-button-desc{
+.footer-button-desc {
   text-align: center;
   font-size: 0.6em;
   color: white;
   margin-top: -7px;
 }
 
-.footer-button-container{
+.footer-button-container {
   display: inline-block;
   width: 25%;
-  float: left;
   height: 56px;
 }
 
-.mat-toolbar{
+.mat-toolbar {
   padding: 0px;
 }
 
@@ -33,6 +32,7 @@
   background-color: white;
 }
 
- .footer-button-container.selected > button > span > mat-icon, .footer-button-container.selected > p {
+.footer-button-container.selected .white,
+.footer-button-container.selected > p {
   color: #48bdb8;
 }

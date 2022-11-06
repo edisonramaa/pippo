@@ -1,15 +1,11 @@
 package com.junction.pippo.web.config;
 
-import com.junction.pippo.web.model.LocationEntity;
-import com.junction.pippo.web.model.LocationPoint;
-import com.junction.pippo.web.model.UserEntity;
 import com.junction.pippo.web.repository.IUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
 
 /**
  * DataSourceInitializer populates the database with some

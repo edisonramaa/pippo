@@ -1,7 +1,7 @@
 import express, { NextFunction, Response, Request } from 'express';
 import fs from 'fs';
 import { Config } from '../Config';
-import { WoltAPI } from './WoltApi';
+import { Routes } from './Routes';
 /**
  * Http controller
  * Responsible of handling HTTP communication with the service
@@ -101,7 +101,7 @@ export class HttpController {
             res.json({ message: "Hello from server!" });
         });
         // routes
-        new WoltAPI().route(app);
+        new Routes().route(app);
 
         return app;
     }
