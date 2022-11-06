@@ -2,15 +2,7 @@ import {NgModule} from "@angular/core";
 import {RouterModule, Routes} from "@angular/router";
 import {LayoutComponent} from "./layout.component";
 import {
-  CHARTS,
-  CHATS,
   MAIN_URL,
-  MY_TRIPS,
-  SUGGESTIONS,
-  NATURE_LOCATION_EXT,
-  LOCATION_POINT_DETAILS,
-  CHAT_CHANNEL,
-  LOCATION_POINT_DETAILS_EXT,
   PROFILE
 } from "../core/utility/navigation-url";
 

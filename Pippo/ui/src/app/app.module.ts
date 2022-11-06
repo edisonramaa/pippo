@@ -15,10 +15,12 @@ import {ErrorStateMatcher, MatSnackBarModule, ShowOnDirtyErrorStateMatcher} from
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import {SplashScreenComponent} from "./all-view/splash-screen/splash-screen.component";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SplashScreenComponent
   ],
   imports: [
     BrowserModule,

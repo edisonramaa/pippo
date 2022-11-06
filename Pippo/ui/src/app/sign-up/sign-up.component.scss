@@ -8,6 +8,9 @@
   margin: 0 auto !important;
 }
 
+::ng-deep #sign-up .mat-card-header-text {
+  width: 100%;
+}
 #sign-up .mat-raised-button {
   background-color: #48bdb8;
   color: white;

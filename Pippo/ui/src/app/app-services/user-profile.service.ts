@@ -8,8 +8,7 @@ import {HttpService} from "../core/lib/services/http.service";
 export class UserProfileService extends FTBaseService {
   dataModel: UserProfileModel = new UserProfileModel();
 
-  serviceApi: string = '/pippo/user';
-  mapApi: string = "http://your-api-url";
+  serviceApi: string = '/user';
   getMyProfileApi: string = this.serviceApi + '/profile';
 
   constructor(httpService: HttpService) {
